@@ -1,0 +1,43 @@
+.result {
+  height: 60px;
+  background-color: white;
+ 
+  border: 2px solid brown;
+}
+
+.result p {
+  font-size: 40px;
+  margin: 5px;
+
+}
+
+.calculator-body {
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid black;
+  background-color: cyan;
+  
+}
+
+.button {
+  display: block;
+  background-color: #bbb;
+}
+
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+  color: aqua;
+  background-color: tomato;
+  box-shadow: 0 0 10px black;
+  
+
+}
+h1{
+  color: blue;
+  padding-left: 40px;
+}
+body{
+  background-color: darkorange;
+}
