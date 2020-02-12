@@ -1,0 +1,13 @@
+package com.tyss.junit;
+
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+
+public class CalculatorTest {
+
+	public void addTest() {
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.tyss.junit;
+
+public class SimpleCalculator {
+
+	public double div(double x,double y) {
+		
+		return x/y;
+	}
+}

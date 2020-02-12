@@ -1,0 +1,17 @@
+package com.tyss.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+
+class BMICalculatorParamTest {
+
+	@ParameterizedTest
+	void getBmiResultTest(double value,String result) {
+		BMICalculator bmi=new BMICalculator();
+		String actual=bmi.getBmiResult(value);
+		assertEquals(result, actual);
+	}
+ 
+}

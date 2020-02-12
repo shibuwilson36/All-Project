@@ -1,0 +1,37 @@
+package com.tyss.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+class SimpleCalculatorTest {
+
+	@ParameterizedTest
+	@MethodSource("getDivValues")
+	void getDivResultTest(int value1,int value2,int result) {
+		SimpleCalculator calculator=new SimpleCalculator();
+		int actual=calculator.div(value1, value2);
+		assertEquals(result, actual);
+	}
+
+	static Stream<Arguments> getDivValues(){
+		return Stream.of(Arguments.arguments(10,5,2),
+				Arguments.arguments(60,-6,-10)
+				);
+	}
+
+	@Test
+	void divByZero() {
+		SimpleCalculator calculator=new SimpleCalculator();
+		
+		assertThrows(ArithmeticException.class, ()->{
+			calculator.div(20, 0);
+		});
+
+	}
+}

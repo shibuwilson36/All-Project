@@ -1,0 +1,25 @@
+package com.tyss.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Test;
+
+class MyFriendsTest {
+	
+	static MyFriends friends;
+
+	@BeforeAll
+	static void createObject() {
+		friends=new MyFriends();
+	}
+	@RepeatedTest(4)
+	void getNametest(RepetitionInfo info) {
+		int repCount=info.getCurrentRepetition();
+		String actual=friends.getname();
+		assertNotNull(actual);
+	}
+
+}

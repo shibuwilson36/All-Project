@@ -1,0 +1,11 @@
+package com.tyss.junit;
+
+public class BMICalculator {
+
+	public double bmi(int weight,int height) {
+		
+		double result=(weight/(height*height));
+		
+		return result;
+	}
+}

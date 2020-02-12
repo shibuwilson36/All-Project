@@ -1,0 +1,13 @@
+package com.tyss.junit;
+
+public class SimpleCalculator {
+
+	public Double div(double x,double y) {
+		
+		try {
+			return x/y;
+		} catch (Exception e) {
+			return null;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package com.tyss.productrestapi.dao;
+
+import java.util.List;
+
+import com.tyss.productrestapi.dto.ProductInfoBean;
+
+public interface ProductInfoDao {
+	
+	public ProductInfoBean auth(String email,String password);
+	public boolean register(ProductInfoBean bean);
+	public boolean changePassword(int id,String password);
+	public List<ProductInfoBean> search(String name);
+	public boolean deleteEmploye(int id);
+
+}

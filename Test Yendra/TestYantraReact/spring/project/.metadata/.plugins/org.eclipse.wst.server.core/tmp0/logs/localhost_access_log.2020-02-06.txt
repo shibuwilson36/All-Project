@@ -1,0 +1,16 @@
+127.0.0.1 - - [06/Feb/2020:09:27:59 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [06/Feb/2020:09:54:19 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:54:32 +0530] "DELETE /product-rest-api/addproduect HTTP/1.1" 405 1117
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:54:42 +0530] "POST /product-rest-api/addproduect HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:55:06 +0530] "POST /product-rest-api/addproduect HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:55:24 +0530] "POST /product-rest-api/addproduect HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:55:59 +0530] "GET /product-rest-api/allproduect HTTP/1.1" 200 391
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:09:59:33 +0530] "POST /product-rest-api/update HTTP/1.1" 200 86
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:10:01:06 +0530] "POST /product-rest-api/allproduect HTTP/1.1" 405 1115
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:10:01:17 +0530] "GET /product-rest-api/allproduect HTTP/1.1" 200 389
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:10:09:17 +0530] "GET /product-rest-api/search?name=nidhin HTTP/1.1" 500 13766
+127.0.0.1 - - [06/Feb/2020:10:14:50 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [06/Feb/2020:10:15:01 +0530] "GET /product-rest-api/search?name=nidhin HTTP/1.1" 200 186
+127.0.0.1 - - [06/Feb/2020:10:20:56 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [06/Feb/2020:10:21:12 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [06/Feb/2020:10:59:37 +0530] "GET / HTTP/1.1" 404 1074

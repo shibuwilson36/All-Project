@@ -1,0 +1,39 @@
+package com.tyss.productrestapi.dao;
+
+import java.util.List;
+
+import com.tyss.productrestapi.dto.ProductInfoBean;
+
+public class ProductInfoDaoImpl implements ProductInfoDao {
+
+	@Override
+	public boolean addProduct(ProductInfoBean bean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateProduct(ProductInfoBean bean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<ProductInfoBean> getAllProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductInfoBean> searchProduct(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean DeleteProduct(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

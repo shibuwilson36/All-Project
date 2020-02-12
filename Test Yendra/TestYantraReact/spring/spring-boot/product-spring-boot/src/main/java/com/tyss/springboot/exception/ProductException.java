@@ -1,0 +1,9 @@
+package com.tyss.springboot.exception;
+
+public class ProductException extends RuntimeException {
+	public ProductException(String msg) {
+		super(msg);
+	}
+	
+}
+ 

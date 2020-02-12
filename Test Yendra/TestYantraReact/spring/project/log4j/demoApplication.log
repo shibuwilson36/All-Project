@@ -1,0 +1,7 @@
+[main] INFO  dimple  - I am info
+[main] WARN  dimple  - I am warn
+[main] DEBUG dimple  - I am debug method
+[main] INFO  dimple  - I am info method
+[main] WARN  dimple  - I am warn method
+[main] ERROR dimple  - I am error method
+[main] FATAL dimple  - I am fatal method

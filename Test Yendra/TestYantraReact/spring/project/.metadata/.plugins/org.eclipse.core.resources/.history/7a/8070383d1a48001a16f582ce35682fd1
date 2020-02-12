@@ -1,0 +1,32 @@
+package com.tyss.productrestapi.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+
+	@PostMapping(path="/register",
+			produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE )
+	public ProductResponse register(@RequestBody EmployeeInfoBean bean) {
+		ProductResponse response=new ProductResponse();
+
+		if(service.register(bean)) {
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data Inserted into the db");
+
+		}else {
+			response.setStatusCode(401);
+			response.setMessage("failure");
+			response.setDescription("Data not Inserted into the db");
+
+		}
+
+		return response;
+
+	}
+}

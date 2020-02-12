@@ -1,0 +1,39 @@
+spring contain container
+     ->spring container config and store to container
+
+->the scope is singletn
+->bydefult spiring singletn
+
+ SCOPES
+ *java
+   ->singleten(it store  object in spring container)
+   ->prototype(never store  object in spring container)
+ *web
+   ->request
+   ->session
+   ->applicatino
+
+ 
+SPRING BEANS LIFE CYCLE
+'''''''''''''''''''''''
+1)beanfactory
+2)Intataion phase 
+3)befor init
+4)init phase
+5)after init
+6)Usage Beans  
+7)destroy phase     
+
+
+--------------------------------------------
+@Componet
+@Service
+@Repocitary
+
+*************************************
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++                                                +
++  Controller---->Service----->Dao------->DB     +
++
+++++++++++++++++++++++++++++++++++++++++++++++++++

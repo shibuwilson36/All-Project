@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tyss.springboot.exception.EmailAlreadyException&apos; to &apos;ProductException&apos;&#x0D;&#x0A;- Original project: &apos;product-spring-boot&apos;&#x0D;&#x0A;- Original element: &apos;com.tyss.springboot.exception.EmailAlreadyException&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tyss.springboot.exception.ProductException&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EmailAlreadyException&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.tyss.springboot.exception{EmailAlreadyException.java[EmailAlreadyException" matchStrategy="1" name="ProductException" qualified="false" references="true" similarDeclarations="false" stamp="1580985358035" textual="false" version="1.0"/>
+</session>

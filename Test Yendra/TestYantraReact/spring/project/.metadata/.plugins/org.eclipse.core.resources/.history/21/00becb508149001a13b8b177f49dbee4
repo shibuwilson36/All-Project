@@ -1,0 +1,16 @@
+package com.tyss.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MyRestServiceTest {
+
+	@Test
+	void test() {
+		MyRestService service=new MyRestService();
+		String actual=service.getStudentName();
+		assertEquals("Nidhin", actual);
+	}
+
+}
