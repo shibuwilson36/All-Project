@@ -1,0 +1,76 @@
+package com.tyss.springrest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tyss.springrest.dto.EmployeeInfoBean;
+import com.tyss.springrest.dto.EmployeeResponse;
+import com.tyss.springrest.service.EmployeService;
+
+@RestController
+public class EmployeeRestController {
+	@Autowired
+	private EmployeService service;
+
+	@GetMapping(path="/search",produces = MediaType.APPLICATION_JSON_VALUE)
+	public EmployeeResponse search(@RequestParam(name="name",required = false)String name) {
+		EmployeeResponse response=new EmployeeResponse();
+		List<EmployeeInfoBean> beans=service.search(name);
+		if(beans!=null&&!beans.isEmpty()) {
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Data  found");
+			response.setBeans(beans);
+		}else {
+			response.setStatusCode(401);
+			response.setMessage("failure");
+			response.setDescription("Data not found");
+			
+		}
+		return response;
+
+	}
+	@PostMapping(path="/register",
+			produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE )
+	public boolean register(@RequestBody EmployeeInfoBean bean) {
+
+		return service.register(bean);
+
+	}
+	@PostMapping(path="/auth",
+			produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE )
+	public EmployeeInfoBean auth(@RequestBody EmployeeInfoBean bean) {
+
+		return service.auth(bean.getEmail(),bean.getPassword());
+
+	}
+	@PostMapping(path="/change-password",
+			produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE )
+	public boolean changePassword(@RequestBody EmployeeInfoBean bean) {
+
+		return service.changePassword(bean.getId(),bean.getPassword());
+
+	}
+	@DeleteMapping(path="/delete/{id}",
+			produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public boolean deleteEmploye( @PathVariable("id") int id) {
+
+		return service.deleteEmploye(id);
+
+	}
+
+
+
+}

@@ -1,0 +1,34 @@
+package com.tyss.springrest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tyss.springrest.dto.EmployeeInfoBean;
+import com.tyss.springrest.service.EmployeService;
+
+@RestController
+public class EmployeeRestController {
+	@Autowired
+	private EmployeService service;
+	
+	@GetMapping(path="/search",produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<EmployeeInfoBean> search(@RequestParam(name="name",required = false)String name) {
+
+		List<EmployeeInfoBean> beans=service.search(name);
+		return beans;
+				
+	}
+	@PostMapping(path="/register",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public boolean register(EmployeeInfoBean bean) {
+		
+		return service.register(bean);
+		
+	}
+	
+}

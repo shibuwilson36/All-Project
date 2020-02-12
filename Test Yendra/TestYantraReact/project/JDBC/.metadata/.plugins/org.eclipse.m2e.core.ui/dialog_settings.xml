@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="F:\Test Yendra\TestYantraReact\JDBC\spring-rest\pom.xml"/>
+			<item value="F:\Test Yendra\TestYantraReact\JDBC\hibernateapp\src\main\java\com\tyss\hibernateapp\RemoveDemo.java"/>
+			<item value="F:\Test Yendra\TestYantraReact\JDBC\webapp\src\main\java\com\tyss\webapp\servlet\GetRequestAttributeServlet.java"/>
+			<item value="F:\Test Yendra\TestYantraReact\JDBC\jdbcapps\src\com\testyantra\jdbcapps\MyFirstJdbc.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.tyss.junit"/>
+			<item value="com.tyss.springrest"/>
+			<item value="com.tyss.empspringmvc"/>
+			<item value="com.tyss.springmvc"/>
+			<item value="com.tyss.employeapp"/>
+			<item value="com.tyss.employeewebapp"/>
+			<item value="com.tyss.employee"/>
+			<item value="com.tyss.hibernateapp"/>
+			<item value="com.tyss.webapp"/>
+		</list>
+		<list key="groupId">
+			<item value="com.tyss"/>
+		</list>
+		<list key="artifactId">
+			<item value="junit"/>
+			<item value="spring-rest"/>
+			<item value="emp-spring-mvc"/>
+			<item value="spring-mvc"/>
+			<item value="employeapp"/>
+			<item value="employeewebapp"/>
+			<item value="employee"/>
+			<item value="hibernateapp"/>
+			<item value="webapp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
