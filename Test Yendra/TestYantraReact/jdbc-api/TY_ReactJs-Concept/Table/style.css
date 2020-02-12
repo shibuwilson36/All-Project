@@ -1,0 +1,13 @@
+.tableBorder {
+    border: 1px solid springgreen;
+}
+
+.header {
+    border: 1px solid tomato;
+    background-color: thistle;
+}
+
+.body {
+    border: 1px solid black;
+    background-color: wheat;
+}
