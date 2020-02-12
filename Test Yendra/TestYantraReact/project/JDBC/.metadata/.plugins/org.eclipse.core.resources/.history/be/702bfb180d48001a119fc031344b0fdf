@@ -1,5 +1,0 @@
-package com.tyss.springrest.dto;
-
-public class EmployeeResponse {
-
-}
