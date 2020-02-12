@@ -1,0 +1,10 @@
+1)
+2}
+3)
+->enitity class presnt in dto package 
+
+4)create config file
+->file name is persistence.xml
+->create folder META-INF
+             in   ->src/main/resourse/META-INF
+                       

@@ -1,0 +1,22 @@
+package com.tyss.springcore.config;
+
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.tyss.springcore.beanfactoryPostProcessorImpl;
+import com.tyss.springcore.beans.Hello;
+
+@Configuration
+public class BeanConfig {
+	@Bean(name="hello" )
+	public Hello getHello() {
+		Hello hello = new Hello();
+		hello.setMessage("I love Spring");
+		return hello;
+	}
+//	@Bean("beanPost")
+//	public BeanFactoryPostProcessor getBeanFactoryPostProcessor() {
+//		return new beanfactoryPostProcessorImpl();
+//	}
+}

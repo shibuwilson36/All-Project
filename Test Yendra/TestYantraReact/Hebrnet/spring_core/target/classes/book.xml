@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="author" class="com.tyss.springcore.beans.Author">
+	
+	<constructor-arg name="name" value="authorName"></constructor-arg>
+	<constructor-arg name="penName" value="author pen Name"></constructor-arg>
+	
+	
+		<!-- <property name="name" value="authorName"></property>
+		<property name="penName" value="author pen Name"></property> -->
+	</bean>
+	<bean id="book" class="com.tyss.springcore.beans.Book" autowire="byType">
+	
+	<!-- <constructor-arg name="name" value="book1"></constructor-arg> -->
+		 <property name="name" value="book1"></property> 
+		<!-- <property name="author" ref="author"></property> -->
+	</bean>
+</beans>
