@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript" language="javascript">
+        function calcAge(dtFrom, dtTo) {
+            var a = dtTo.getDate() + (dtTo.getMonth() + (dtTo.getFullYear() - 1700) * 16) * 32;
+            var b = dtFrom.getDate() + (dtFrom.getMonth() + (dtFrom.getFullYear() - 1700) * 16) * 32;
+            var x = Math.floor((a - b) / 32 / 16);
+            return x < 0 ? null : x;
+        }
+
+        function calc() {
+            var dtTo = new Date(document.getElementById('enddate').value);
+            var dtFrom = new Date(document.getElementById('startdate').value);
+            document.getElementById('diff').value = calcAge(dtFrom, dtTo);
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    Start Date:<input type='text' id='startdate' value='03/21/1972' /><br/> End Date:<input type='text' id='enddate' value='03/21/1979' /><br/> Years:
+    <input type='text' id='diff' value='' /><br/>
+    <input type='button' onclick='javascript:calc();' value='Calculate' />
+</body>
+
+</html>

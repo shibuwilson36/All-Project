@@ -1,0 +1,6 @@
+127.0.0.1 - - [07/Jan/2020:15:04:07 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [07/Jan/2020:15:06:26 +0530] "GET /shoppingcart/getproduct HTTP/1.1" 200 10
+0:0:0:0:0:0:0:1 - - [07/Jan/2020:15:08:03 +0530] "GET /shoppingcart/getproduct HTTP/1.1" 200 10
+0:0:0:0:0:0:0:1 - - [07/Jan/2020:15:08:24 +0530] "OPTIONS /shoppingcart/addproduct HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2020:15:08:35 +0530] "GET /shoppingcart/getproduct HTTP/1.1" 200 10
+0:0:0:0:0:0:0:1 - - [07/Jan/2020:15:08:42 +0530] "GET /shoppingcart/getproduct HTTP/1.1" 200 10

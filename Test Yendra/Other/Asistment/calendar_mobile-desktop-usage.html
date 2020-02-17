@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <script>
+        // Ignore this in your implementation
+        window.isMbscDemo = true;
+    </script>
+
+    <title>Mobile & Desktop usage</title>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div mbsc-page class="demo-mobile-desktop-usage">
+        <div mbsc-form>
+            <div class="mbsc-grid mbsc-form-grid">
+                <div class="mbsc-row">
+                    <div class="mbsc-col-sm-12 mbsc-col-md-6">
+                        <label>
+                        Mobile
+                    </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mobiscroll.calendar('#demo-mobile', {
+            display: 'bubble' // Specify display mode like: display: 'bottom' or omit setting to use default
+        });
+    </script>
+
+</body>
+
+</html>

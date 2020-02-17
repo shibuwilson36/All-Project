@@ -1,0 +1,135 @@
+package com.testyantra.shopingcart.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.testyantra.shopingcart.bean.CartBean;
+import com.testyantra.shopingcart.bean.ProductBean;
+
+
+public class CartDaoImpl implements CartDao {
+
+	
+
+	@Override
+	public ArrayList<ProductBean > getAllData() {
+
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		ArrayList<ProductBean > arrayList=null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String url="jdbc:mysql://localhost:3306/shopping_cart_db";
+			con=DriverManager.getConnection(url,"root","root");
+			String sql="select * from cart_list ";
+			pstmt=con.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+
+			while(rs.next()) {
+				arrayList=new ArrayList<ProductBean>();
+				ProductBean bean=new ProductBean();
+				bean.setProductId(rs.getInt("product_id"));
+				arrayList.add(bean);
+
+			}
+
+
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		finally {
+			if(rs!=null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(pstmt!=null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(con!=null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return arrayList;
+
+
+	}
+
+	@Override
+	public boolean addCart(CartBean bean) {
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		boolean isAdd=false;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String url="jdbc:mysql://localhost:3306/cart_list_db";
+			con=DriverManager.getConnection(url,"root","root");
+			String sql="insert into cart_list values(?,?,?)";
+			pstmt=con.prepareStatement(sql);
+
+			pstmt.setInt(1, bean.getCartId());
+			pstmt.setInt(2, bean.getCustomerId());
+			pstmt.setInt(3, bean.getWishId());
+	
+
+			int result=pstmt.executeUpdate();
+
+			if(result>0) {
+
+				isAdd=true;
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		finally {
+
+			if(pstmt!=null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(con!=null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+
+		return isAdd;
+
+	}
+
+
+
+
+
+}

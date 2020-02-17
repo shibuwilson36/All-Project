@@ -1,0 +1,12 @@
+package com.testyantra.shoppingcart.util;
+
+import com.testyantra.shopingcart.dao.OrderDaoImpl;
+
+public class OrderManager {
+	private OrderManager() {
+
+	}
+	public static OrderDaoImpl getInstant() {
+		return new OrderDaoImpl();
+	}
+}

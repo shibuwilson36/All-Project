@@ -1,0 +1,11 @@
+package com.testyantra.shopingcart.dao;
+
+import java.util.ArrayList;
+
+import com.testyantra.shopingcart.bean.CartBean;
+import com.testyantra.shopingcart.bean.ProductBean;
+import com.testyantra.shopingcart.bean.UserBean;
+
+public interface UserDao {
+	public boolean addUser(UserBean userBean) ;
+}

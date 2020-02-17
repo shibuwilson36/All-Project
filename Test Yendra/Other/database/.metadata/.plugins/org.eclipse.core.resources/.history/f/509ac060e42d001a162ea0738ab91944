@@ -1,0 +1,13 @@
+package com.testyantra.shoppingcart.util;
+
+import com.testyantra.shopingcart.dao.CartDao;
+import com.testyantra.shopingcart.dao.CartDaoImpl;
+
+public class CartManger2 {
+	private CartManger2() {
+
+	}
+	public static CartDao getInstance() {
+		return new CartDaoImpl();
+	}
+}

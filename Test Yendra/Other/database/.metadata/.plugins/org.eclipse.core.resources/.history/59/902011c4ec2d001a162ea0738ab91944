@@ -1,0 +1,5 @@
+package com.testyantra.shopingcart.dao;
+
+public class OrderDaoImpl {
+
+}

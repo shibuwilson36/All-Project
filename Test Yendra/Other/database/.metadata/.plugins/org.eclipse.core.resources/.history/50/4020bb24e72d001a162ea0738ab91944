@@ -1,0 +1,43 @@
+package com.testyantra.shopingcart.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.testyantra.shopingcart.bean.WishListBean;
+import com.testyantra.shopingcart.dao.WishListDao;
+import com.testyantra.shoppingcart.util.WishListManger;
+
+public class AddWishListServlet extends HttpServlet {
+@Override
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	int customer_Id = Integer.parseInt(req.getParameter("customer_Id"));
+	int product_Id = Integer.parseInt(req.getParameter("product_Id"));
+	
+	
+	WishListBean bean = new WishListBean();
+	
+	bean.setCustomer_Id(customer_Id);
+	bean.setProduct_Id(product_Id);
+	WishListDao dao=WishListManger.getInstance();
+	
+	PrintWriter out = resp.getWriter();
+	out.println("<html>");
+	out.println("<body>");
+	if(dao.addWishList(bean)) {
+		out.println("<h2> Record inserted succesfully....<h2>");		
+	}
+	else {
+		out.println("<h2> unable to inserted Record....<h2>");
+	}	
+	out.println("</body>");
+	out.println("</html>");
+
+
+
+}
+}

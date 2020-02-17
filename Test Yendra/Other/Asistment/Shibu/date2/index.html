@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: tomato;
+        }
+        
+        td,
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-6 offset-3 mt-5 card card-body bg-info">
+        <FORM name="live">
+
+            <p>Please enter your age::
+                <INPUT TYPE="text" NAME="age" VALUE="" SIZE=20> Example: (november 1,1966)
+            </p>
+            <BR>
+            <BR>
+            <BR>
+            <INPUT class="btn offset-3" TYPE="button" NAME="start" VALUE="Start Timer" ONCLICK="lifetimer(this.form)">
+
+            <INPUT class="btn" TYPE="reset" NAME="resetb" VALUE="Reset Age">
+
+            <BR>
+            <BR>
+
+            <TABLE class="table">
+                <TR>
+                    <TD>You are days old:</TD>
+
+                    <TD>
+
+                        <INPUT TYPE="text" NAME="time1" VALUE="" size=8>
+
+                    </TD>
+
+                </TR>
+
+                <TR>
+                    <TD>Plus hours old:</TD>
+
+                    <TD>
+
+                        <INPUT TYPE="text" NAME="time2" VALUE="" size=8>
+
+                    </TD>
+
+                </TR>
+
+                <TR>
+                    <TD>Plus minutes old:</TD>
+
+                    <TD>
+                        <INPUT TYPE="text" NAME="time3" VALUE="" size=8>
+                    </TD>
+
+                </TR>
+            </TABLE>
+        </FORM>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

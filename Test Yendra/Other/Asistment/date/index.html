@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        p {
+            color: white;
+        }
+        
+        body {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-6 offset-3 card mt-5 bg-primary">
+        <h3><i>On what day of the week were you born?</i></h3>
+        <b>
+            
+            <p>Enter your birthday</b> (then hit the &quot;Update&quot; button):</p>
+
+        <form>
+            <table class="table">
+                <tr>
+                    <td>
+                        <p>Numeric Month (1-12): </p>
+                    </td>
+                    <td>
+                        <input TYPE="text" NAME="month" SIZE="4"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Day of Month (1-31): </p>
+                    </td>
+                    <td>
+                        <input TYPE="text" NAME="day" SIZE="4"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Year (eg. 1960): </p>
+                    </td>
+                    <td>
+                        <input TYPE="text" NAME="year" SIZE="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p class="offset-4"><input class="btn" TYPE="button" VALUE="Update" ONCLICK="compute(this.form)"> <input class="btn" TYPE="reset" VALUE="Clear"> </p>
+            <p>Date of Birth: <input TYPE="text" NAME="result1" SIZE="18"> </p>
+            <p>Day of Week: <input TYPE="text" NAME="result2" SIZE="18"> </p>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

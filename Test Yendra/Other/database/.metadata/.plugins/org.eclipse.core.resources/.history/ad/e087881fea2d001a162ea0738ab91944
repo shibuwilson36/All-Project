@@ -1,0 +1,67 @@
+package com.testyantra.shopingcart.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.testyantra.shopingcart.bean.UserBean;
+
+public class UserDaoImpl {
+public boolean addUser(UserBean userBean) {
+		
+		Connection con =null;
+		PreparedStatement pstmt = null;
+		boolean isAdded = false;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping_cart_db", "root", "root");
+
+			String query = "insert into user_info values(?,?,?,?,?,?,?)";
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1,userBean.getUser_id() );
+			pstmt.setString(2,userBean.getUser_Name());
+			pstmt.setString(3,userBean.getEmail());
+			pstmt.setLong(4,userBean.getMobile());
+			pstmt.setInt(5,userBean.getAge());
+			pstmt.setString(6,userBean.getRole());
+			pstmt.setString(7, userBean.getPassword());
+						
+			int n = pstmt.executeUpdate();
+			
+			//System.out.println();
+			if(n>0) {
+				isAdded = true;
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+		finally {
+
+			if(pstmt!=null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+
+					e.printStackTrace();
+				}
+			}
+			if(con!=null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+
+		}//end of try catch finally
+		return isAdded;
+	}// end of addEmployee
+}

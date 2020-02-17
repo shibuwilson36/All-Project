@@ -1,0 +1,5 @@
+package com.testyantra.shopingcart.bean;
+
+public class OrderBean {
+
+}
